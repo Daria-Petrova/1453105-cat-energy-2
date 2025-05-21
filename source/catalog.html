@@ -8,30 +8,28 @@
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
-    <header class="main-header">
-      <nav class="main-header__navigation">
-        <div class="navigation-logo">
-          <a class="navigation-logo__image-link" href="index.html">
-            <img class="navigation-logo__image" src="/" width="100" height="100" alt="Логотип продукта изображение"></a>
-          <a class="navigation-logo__text-link" href="index.html">
-            <img class="navigation-logo__text" src="/" width="100" height="100" alt="Логотип продукта текстовый"></a>
-        </div>
-        <div class="navigation-menu">
-          <button class="navigation-menu__button" type="button"><span class="visually-hidden">Показать меню</span></button>
-        </div>
-        <ul class="navigation-list">
-            <li class="navigation-list__item">
-              <a class="navigation-list__link" href="index.html">Главная</a>
-            </li>
-            <li class="navigation-list__item">
-              <a class="navigation-list__link navigation-list__link--active" href="#">Каталог продукции</a>
-            </li>
-            <li class="navigation-list__item">
-              <a class="navigation-list__link" href="#">Подбор программы</a>
-            </li>
-          </ul>
-      </nav>
-    </header>
+  <header class="main-header">
+    <a class="main-header__logo logo" href="index.html">
+      <img class="logo__image" src="/" width="100" height="100" alt="Логотип продукта изображение">
+      <img class="logo__text" src="/" width="100" height="100" alt="Логотип продукта текстовый">
+    </a>
+    <nav class="main-nav">
+      <div class="main-nav__toggle">
+        <button class="main-nav__toggle-button" type="button"><span class="visually-hidden">Показать меню</span></button>
+      </div>
+      <ul class="main-nav__list navigation-list">
+        <li class="navigation-list__item">
+          <a class="navigation-list__link" href="index.html">Главная</a>
+        </li>
+        <li class="navigation-list__item">
+          <a class="navigation-list__link navigation-list__link--active" href="catalog.html">Каталог продукции</a>
+        </li>
+        <li class="navigation-list__item">
+          <a class="navigation-list__link" href="#">Подбор программы</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
     <main class="main-catalog">
       <h1 class="visually-hidden">Каталог продукции</h1>
       <section class="catalog">
@@ -149,14 +147,14 @@
               <a class="product__link button" href="#">Заказать</a>
             </div>
           </li>
+          <li class="catalog__item show-product">
+            <div class="show-product__block">
+              <p class="show-product__title">Показать еще 100500 товаров</p>
+              <p class="show-product__subtitle">На самом деле вкусов гораздо больше!</p>
+              <a class="show-product__link button" href="#">Показать всё</a>
+            </div>
+          </li>
         </ul>
-        <div class="catalog__show">
-          <div class="catalog__show-block">
-            <p class="catalog__show-title">Показать еще 100500 товаров</p>
-            <p class="catalog__show-subtitle">На самом деле вкусов гораздо больше!</p>
-            <a class="catalog__show-link button" href="#">Показать всё</a>
-          </div>
-        </div>
       </section>
       <section class="extra-product">
         <h2 class="extra-product__title">Дополнительные товары</h2>
