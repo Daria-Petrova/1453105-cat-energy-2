@@ -8,32 +8,31 @@
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
-  <header class="main-header">
-    <a class="main-header__logo logo" href="index.html">
-      <img class="logo__image" src="/" width="100" height="100" alt="Логотип продукта изображение">
-      <img class="logo__text" src="/" width="100" height="100" alt="Логотип продукта текстовый">
-    </a>
-    <nav class="main-nav">
-      <div class="main-nav__toggle">
-        <button class="main-nav__toggle-button" type="button"><span class="visually-hidden">Показать меню</span></button>
-      </div>
-      <ul class="main-nav__list navigation-list">
-        <li class="navigation-list__item">
-          <a class="navigation-list__link" href="index.html">Главная</a>
-        </li>
-        <li class="navigation-list__item">
-          <a class="navigation-list__link navigation-list__link--active" href="catalog.html">Каталог продукции</a>
-        </li>
-        <li class="navigation-list__item">
-          <a class="navigation-list__link" href="#">Подбор программы</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-    <main class="main-catalog">
-      <h1 class="visually-hidden">Каталог продукции</h1>
+    <header class="main-header">
+      <a class="main-header__logo logo" href="index.html">
+        <img class="logo__image" src="/" width="100" height="100" alt="Логотип продукта изображение">
+        <img class="logo__text" src="/" width="100" height="100" alt="Логотип продукта текстовый">
+      </a>
+      <nav class="main-nav">
+        <div class="main-nav__toggle">
+          <button class="main-nav__toggle-button" type="button"><span class="visually-hidden">Показать меню</span></button>
+        </div>
+        <ul class="main-nav__list navigation-list">
+          <li class="navigation-list__item">
+            <a class="navigation-list__link" href="index.html">Главная</a>
+          </li>
+          <li class="navigation-list__item">
+            <a class="navigation-list__link navigation-list__link--active" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="navigation-list__item">
+            <a class="navigation-list__link" href="#">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main main--catalog">
       <section class="catalog">
-        <h2 class="catalog__title">Товары в наличии</h2>
+        <h1 class="catalog__title">Каталог продукции</h1>
         <ul class="catalog__list">
           <li class="catalog__item">
             <div class="product">
@@ -191,14 +190,14 @@
       <section class="subscription">
         <h2 class="subscription__title">Акции и новинки</h2>
         <p class="subscription__subtitle">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
-        <form class="subscription__form" action="https://echo.htmlacademy.ru/" method="post">
-          <label class="visually-hidden" for="subscription-form-id">Введите адрес почты</label>
-          <input class="subscription__form-input" type="email" id="subscription-form-id" name="email" placeholder="kuklachev@gmail.com">
-          <button class="subscription__form-button button" type="submit">Подписаться</button>
+        <form class="subscription__form form" action="https://echo.htmlacademy.ru/" method="post">
+          <label class="visually-hidden" for="form-email">Введите адрес почты</label>
+          <input class="form__input" type="email" id="form-email" name="email" placeholder="kuklachev@gmail.com">
+          <button class="form__button button" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
-    <footer class="footer catalog-footer">
+    <footer class="footer footer--catalog">
       <section class="map">
         <h2 class="visually-hidden">Адрес магазина</h2>
         <div class="map__address">
@@ -214,23 +213,22 @@
       </section>
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <div class="logo">
-          <a class="logo__text-link" href="index.html">
-            <img class="logo__text" src="/" width="100" height="100" alt="Логотип продукта текстовый"></a>
-        </div>
+        <a class="contacts__logo logo" href="index.html">
+          <img class="logo__text" src="/" width="100" height="100" alt="Логотип продукта текстовый">
+        </a>
         <ul class="link-list">
           <li class="link-list__item">
-            <a class="link-list__link link-vk" href="https://vk.com/htmlacademy">
+            <a class="link-list__link link-list__link--vk" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Мы в Vkontakte</span>
             </a>
           </li>
           <li class="link-list__item">
-            <a class="link-list__link link-youtube" href="https://www.youtube.com/user/htmlacademyru">
+            <a class="link-list__link link-list__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">Мы в Youtube</span>
             </a>
           </li>
           <li class="link-list__item">
-            <a class="link-list__link link-telegram" href="https://t.me/htmlacademy">
+            <a class="link-list__link link-list__link--telegram" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Мы в Telegram</span>
             </a>
           </li>
