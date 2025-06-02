@@ -1,0 +1,19 @@
+.declaration {
+  font-family: $secondary-font;
+  background:linear-gradient(to bottom, $accent-color 50%,  $secondary-color 50%);
+}
+
+.declaration__title {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 36px;
+  color: $secondary-color;
+}
+
+.declaration__subtitle {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  color: $secondary-color;
+  text-transform: uppercase;
+}

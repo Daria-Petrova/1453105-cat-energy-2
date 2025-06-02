@@ -1,0 +1,28 @@
+.nutrition-type__list-item {
+  background-color: $basic-bg-color;
+}
+
+.nutrition-type__list-title {
+  font-family: $secondary-font;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.37;
+  text-transform: uppercase;
+}
+
+.nutrition-type__list-subtitle {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.18;
+  color: $basic-text-color;
+}
+
+.nutrition-type__list-link {
+  font-family: $secondary-font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: $based-color;
+}

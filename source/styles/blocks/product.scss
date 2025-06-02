@@ -1,0 +1,24 @@
+.product__title {
+  font-family: $secondary-font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  color: $second-text-color;
+}
+
+.product__definition-name {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  color: $basic-text-color;
+}
+
+.product__definition-value {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  color: $basic-text-color;
+}
