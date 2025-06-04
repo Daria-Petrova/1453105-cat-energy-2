@@ -1,45 +1,51 @@
 .extra-product__title {
-  font-family: $secondary-font;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 1;
+  @include font-decore($main-font, 24px, 1, 400, $based-color);
+}
+
+.extra-product__list {
+  @include reset-list;
 }
 
 .extra-product__item-title {
-  font-family: $secondary-font;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1;
+  @include font-decore($main-font, 16px, 1, 400, $second-text-color);
   text-transform: uppercase;
-  color: $second-text-color;
 }
 
 .extra-product__item-subtitle {
-  font-family: inherit;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1;
-  text-transform: uppercase;
-  color: $second-text-color;
+  @include font-decore($second-font, 14px, 1, 400, $second-text-color);
 }
 
 .extra-product__item-price {
-  font-family: inherit;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1;
+  @include font-decore($second-font, 14px, 1, 400, $second-text-color);
   text-transform: uppercase;
-  color: $second-text-color;
+}
+
+.extra-product__item-link {
+  text-decoration: none;
 }
 
 .extra-product__present {
-  background-color: $accent-color;
+  background-image:
+    linear-gradient(rgba(105, 184, 57, 0.85), rgba(105, 184, 57, 0.85)),
+    url("../../images/decorate/backgrounds/bg-catalog-page-mobile@1x.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto, auto;
+
+  @include retina {
+    background-image:
+      linear-gradient(rgba(105, 184, 57, 0.85), rgba(105, 184, 57, 0.85)),
+      url("../../images/decorate/backgrounds/bg-catalog-page-mobile@2x.png");
+    background-size: auto, auto 290px;
+  }
+
+  @include tablet-size {
+    background-position: center center;
+    background-size: auto, cover;
+  }
 }
 
 .extra-product__present-title {
-  font-family: inherit;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  color: $secondary-color;
+  @include font-decore($second-font, 16px, 1.25, 400, $secondary-color);
+  padding: 48px 60px 45px;
 }

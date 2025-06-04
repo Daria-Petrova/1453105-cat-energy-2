@@ -1,12 +1,8 @@
 .form__input {
-  font-family: $secondary-font;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1;
+  @include font-decore($main-font, 20px, 1, 400, $basic-text-color);
   text-transform: uppercase;
-  color: $based-color;
 
   &::placeholder {
-    color: $based-color;
+    color: $basic-text-color;
   }
 }

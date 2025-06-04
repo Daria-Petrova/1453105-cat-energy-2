@@ -1,7 +1,7 @@
 .catalog__title {
-  font-family: $secondary-font;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 1;
-  text-transform: uppercase;
+  @include font-decore($main-font, 36px, 1, 400, $based-color);
+}
+
+.catalog__list {
+  @include reset-list;
 }

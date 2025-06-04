@@ -1,34 +1,25 @@
 .example {
-  background-color: #aeaeae;
+  background-color: #eaeaea;
 }
 
 .example__title {
-  font-family: $secondary-font;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 1.4;
+  @include font-decore($main-font, 36px, 1.4, 400, $based-color);
 }
 
 .example__subtitle {
-  font-family: inherit;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.29;
-  color: $basic-text-color;
+  @include font-decore($second-font, 14px, 1.29, 400, $basic-text-color);
+}
+
+.example__list {
+  @include reset-list;
 }
 
 .example__list-item {
-  font-family: $secondary-font;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 1;
+  @include font-decore($main-font, 24px, 1, 400, $based-color);
   text-transform: uppercase;
 }
 
 .example__sum {
-  font-family: $secondary-font;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.43;
+  @include font-decore($main-font, 14px, 1.4, 400, $based-color);
   text-transform: uppercase;
 }

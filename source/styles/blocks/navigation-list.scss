@@ -1,12 +1,11 @@
 .navigation-list {
   background-color: inherit;
+
+  @include reset-list;
 }
 
 .navigation-list__link {
-  font-family: inherit;
-  font-size: 20px;
-  font-weight: 400;
-  color: $based-color;
-  line-height: 1;
+  @include font-decore($main-font, 20px, 1, 400, $based-color);
   text-transform: uppercase;
+  text-decoration: none;
 }
