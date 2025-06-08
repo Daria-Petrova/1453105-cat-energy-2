@@ -6,6 +6,76 @@
   @include reset-list;
 }
 
+.process__list-item {
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--healthy {
+    .process__list-title {
+      &::after {
+        mask-image:  url("../../icons/icon-leaf.svg");
+        mask-size: 30px 32px;
+      }
+    }
+  }
+
+  &--easy {
+    .process__list-title {
+      &::after {
+        mask-image:  url("../../icons/icon-powder.svg");
+        mask-size: 26px 29px;
+      }
+    }
+  }
+
+  &--exchange {
+    .process__list-title {
+      &::after {
+        mask-image:  url("../../icons/icon-cutlery.svg");
+        mask-size: 25px 30px;
+      }
+    }
+  }
+
+  &--time {
+    .process__list-title {
+      &::after {
+        mask-image:  url("../../icons/icon-clock.svg");
+        mask-size: 26px 31px;
+      }
+    }
+  }
+}
+
 .process__list-title {
   @include font-decore($second-font, 14px, 1.18, 400, $basic-text-color);
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    min-width: 60px;
+    min-height: 60px;
+    background-color: $accent-color;
+    margin-right: 20px;
+    align-self: start;
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    content: "";
+    mask-repeat: no-repeat;
+    mask-position: center;
+    width: 60px;
+    height: 60px;
+    display: block;
+    background-color: $secondary-color;
+  }
 }

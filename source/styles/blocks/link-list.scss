@@ -1,3 +1,27 @@
 .link-list {
   @include reset-list;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.link-list__link {
+  content: "";
+  background-color: #504f54;
+  display: block;
+  width: 28px;
+  height: 22px;
+  &--vk {
+    mask: url("../../icons/icon-vk.svg") no-repeat center;
+  }
+  &--youtube {
+    mask: url("../../icons/icon-youtube.svg") no-repeat center;
+  }
+  &--telegram {
+    mask: url("../../icons/icon-tg.svg") no-repeat center;
+  }
 }

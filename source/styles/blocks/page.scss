@@ -2,4 +2,7 @@
   background-color: $secondary-color;
   color: $based-color;
   font-family: $main-font;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
 }

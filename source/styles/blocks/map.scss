@@ -6,6 +6,10 @@
   }
 }
 
+.map__image {
+  display: block;
+}
+
 .map__address-title {
   @include font-decore($main-font, 16px, 1.25, 400, $based-color);
   text-transform: uppercase;

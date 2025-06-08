@@ -12,16 +12,24 @@
       url("../../images/decorate/backgrounds/bg-main-page-mobile@2x.png"),
       linear-gradient(to right, #504f54, #434247);
     background-size: auto, auto 320px, auto;
+    background-repeat: no-repeat;
   }
+  margin-bottom: 20px;
 }
 
 .declaration__title {
   @include font-decore($main-font, 36px, 1, 400, $secondary-color);
   text-align: center;
+  margin: 0;
 }
 
 .declaration__subtitle {
   @include font-decore($main-font, 14px, 1, 400, $secondary-color);
   text-transform: uppercase;
   text-align: center;
+}
+
+.declaration__link {
+  display: block;
+  text-decoration: none;
 }
