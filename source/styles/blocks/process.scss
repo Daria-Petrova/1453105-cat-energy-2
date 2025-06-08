@@ -14,38 +14,30 @@
   }
 
   &--healthy {
-    .process__list-title {
-      &::after {
-        mask-image:  url("../../icons/icon-leaf.svg");
-        mask-size: 30px 32px;
-      }
+    .process__list-title::after {
+      mask-image: url("../../icons/icon-leaf.svg");
+      mask-size: 30px 32px;
     }
   }
 
   &--easy {
-    .process__list-title {
-      &::after {
-        mask-image:  url("../../icons/icon-powder.svg");
-        mask-size: 26px 29px;
-      }
+    .process__list-title::after {
+      mask-image: url("../../icons/icon-powder.svg");
+      mask-size: 26px 29px;
     }
   }
 
   &--exchange {
-    .process__list-title {
-      &::after {
-        mask-image:  url("../../icons/icon-cutlery.svg");
-        mask-size: 25px 30px;
-      }
+    .process__list-title::after {
+      mask-image: url("../../icons/icon-cutlery.svg");
+      mask-size: 25px 30px;
     }
   }
 
   &--time {
-    .process__list-title {
-      &::after {
-        mask-image:  url("../../icons/icon-clock.svg");
-        mask-size: 26px 31px;
-      }
+    .process__list-title::after {
+      mask-image: url("../../icons/icon-clock.svg");
+      mask-size: 26px 31px;
     }
   }
 }

@@ -2,7 +2,6 @@
   @include reset-list;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   gap: 24px;
   justify-content: center;
   padding: 20px 0;
@@ -15,12 +14,15 @@
   display: block;
   width: 28px;
   height: 22px;
+
   &--vk {
     mask: url("../../icons/icon-vk.svg") no-repeat center;
   }
+
   &--youtube {
     mask: url("../../icons/icon-youtube.svg") no-repeat center;
   }
+
   &--telegram {
     mask: url("../../icons/icon-tg.svg") no-repeat center;
   }

@@ -7,4 +7,8 @@
 .main-header__logo {
   text-decoration: none;
   margin: 10px 22px 13px;
+  display: grid;
+  grid-template-columns: auto 1fr 20px;
+  align-items: center;
+  justify-content: center;
 }
