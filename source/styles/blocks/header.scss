@@ -1,14 +1,83 @@
-.main-header {
+.header {
   font-family: $main-font;
   background-color: $secondary-color;
   color: $based-color;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  grid-template-areas:
+    "logo            button-area"
+    "navigation-area navigation-area";
+
+  @include mobile-size {
+    &.container {
+      margin: 0;
+    }
+  }
+
+  @include tablet-size {
+    grid-template-columns: auto 1fr;
+    gap: 40px;
+    grid-template-areas: "logo navigation-area";
+
+    &.container {
+      margin: 0 30px;
+    }
+  }
+
+  @include desktop-size {
+    &.container {
+      margin: 0 auto;
+    }
+  }
 }
 
-.main-header__logo {
+.header__logo {
   text-decoration: none;
-  margin: 10px 22px 13px;
+  grid-area: logo;
   display: grid;
-  grid-template-columns: auto 1fr 20px;
-  align-items: center;
-  justify-content: center;
+  margin-left: 20px;
+  grid-template-columns: auto 1fr;
+  padding: 13px 0;
+
+  @include tablet-size {
+    gap: 13px;
+    margin-left: initial;
+  }
+}
+
+.header__toggle-button {
+  grid-area: button-area;
+  margin-right: 20px;
+
+  @include tablet-size {
+    display: none;
+  }
+}
+
+.header__navigation {
+  grid-area: navigation-area;
+  display: none;
+  position: relative;
+  background-color: $secondary-color;
+
+  &--open {
+    display: block;
+
+    .navigation-list {
+      position: absolute;
+      width: 100%;
+    }
+
+    @include tablet-size {
+      .navigation-list {
+        position: inherit;
+        width: initial;
+      }
+    }
+  }
+
+  @include tablet-size {
+    display: block;
+  }
 }

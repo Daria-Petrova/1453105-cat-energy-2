@@ -22,6 +22,12 @@
   list-style: none;
 }
 
+@mixin mobile-size {
+  @media screen and (min-width: $mobile) {
+    @content;
+  }
+}
+
 @mixin tablet-size {
   @media screen and (min-width: $tablet) {
     @content;

@@ -2,11 +2,36 @@
   background-color: inherit;
 
   @include reset-list;
+
+  @include tablet-size {
+    display: flex;
+    position: initial;
+    gap: 10px 33px;
+    justify-content: end;
+    flex-wrap: wrap;
+  }
 }
 
 .navigation-list__item {
   text-align: center;
   border-top: 1px solid #d9d9d9;
+
+  &:last-child {
+    border-bottom: 1px solid #d9d9d9;
+  }
+
+  @include tablet-size {
+    border-top: none;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:has(.navigation-list__link--active) {
+      border-bottom: 2px solid $accent-color;
+    }
+
+  }
 }
 
 .navigation-list__link {
@@ -15,5 +40,10 @@
   text-decoration: none;
   text-align: center;
   display: block;
-  padding: 22px 0;
+  padding: 22px 0 24px;
+
+  @include tablet-size {
+    padding: 10px 0;
+    align-items: center;
+  }
 }
