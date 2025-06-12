@@ -5,6 +5,7 @@
     linear-gradient(to right, #504f54, #434247);
   background-position: center top;
   background-repeat: no-repeat;
+  margin-bottom: 20px;
 
   @include retina {
     background-image:
@@ -14,22 +15,52 @@
     background-size: auto, auto 320px, auto;
     background-repeat: no-repeat;
   }
-  margin-bottom: 20px;
+
+  @include tablet-size {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+
 }
 
 .declaration__title {
   @include font-decore($main-font, 36px, 1, 400, $secondary-color);
   text-align: center;
   margin: 0;
+  padding: 27px 0 25px;
+
+  @include tablet-size {
+    grid-area: title;
+  }
 }
 
 .declaration__subtitle {
   @include font-decore($main-font, 14px, 1, 400, $secondary-color);
   text-transform: uppercase;
   text-align: center;
+  margin: 0;
+  padding-bottom: 29px;
+
+  @include tablet-size {
+    grid-area: subtitle;
+  }
+}
+
+.declaration__image {
+  display: block;
+  padding-bottom: 3px;
+
+  @include tablet-size {
+    grid-area: image;
+  }
 }
 
 .declaration__link {
   display: block;
   text-decoration: none;
+
+  @include tablet-size {
+    grid-area: link;
+  }
 }
