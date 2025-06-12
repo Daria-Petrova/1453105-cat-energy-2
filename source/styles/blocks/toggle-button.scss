@@ -1,0 +1,57 @@
+.toggle-button {
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  border: none;
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.toggle-button__line {
+  width: 24px;
+  height: 2px;
+  background-color: $based-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &::before {
+    content: "";
+    width: 24px;
+    height: 1px;
+    padding: 1px 0;
+    background-color: $based-color;
+    display: block;
+    transform: translateY(-10px);
+    transition: transform 0.3s;
+  }
+
+  &::after {
+    content: "";
+    width: 24px;
+    height: 1px;
+    padding: 1px 0;
+    background-color: $based-color;
+    display: block;
+    transform: translateY(8px);
+    transition: transform 0.3s;
+  }
+}
+
+.toggle-button--open {
+  .toggle-button__line {
+    background-color: transparent;
+
+    &::before {
+      opacity: 1;
+      transform: rotate(45deg) translate(0, 0);
+      transition: transform 0.3s;
+    }
+
+    &::after {
+      transform: rotate(-45deg) translate(2px, -1px);
+      transition: transform 0.3s;
+    }
+  }
+}

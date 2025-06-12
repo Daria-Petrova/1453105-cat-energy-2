@@ -11,5 +11,19 @@ body {
 img {
   max-width: 100%;
   height: auto;
-  object-fit: contain;
+  //object-fit: contain;
+}
+
+.container {
+  margin: 0 20px;
+
+  @include tablet-size {
+    margin: 0 30px;
+  }
+
+  @include desktop-size {
+    max-width: 1220px;
+    width: 100%;
+    margin: 0 auto;
+  }
 }

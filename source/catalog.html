@@ -12,32 +12,33 @@
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
-    <header class="main-header">
-      <a class="main-header__logo logo" href="index.html">
-        <picture>
-          <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo/logo-image-desktop.svg">
-          <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo/logo-image-tablet.svg">
-          <img class="logo__image" src="images/logo/logo-image-mobile.svg" width="33" height="38" alt="Логотип Cat Energy">
-        </picture>
-        <img class="logo__text" src="images/logo/logo-text-mobile.svg" width="101" height="18" alt="Логотип Cat Energy текстовый">
-      </a>
-      <nav class="main-nav">
-        <div class="main-nav__toggle">
-          <button class="main-nav__toggle-button" type="button"><span class="visually-hidden">Показать меню</span></button>
-        </div>
-        <ul class="main-nav__list navigation-list">
-          <li class="navigation-list__item">
-            <a class="navigation-list__link" href="index.html">Главная</a>
-          </li>
-          <li class="navigation-list__item">
-            <a class="navigation-list__link navigation-list__link--active" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="navigation-list__item">
-            <a class="navigation-list__link" href="#">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+  <header class="header container">
+    <a class="header__logo logo" href="index.html">
+      <picture>
+        <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo/logo-image-desktop.svg">
+        <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo/logo-image-tablet.svg">
+        <img class="logo__image" src="images/logo/logo-image-mobile.svg" width="33" height="38" alt="Логотип Cat Energy">
+      </picture>
+      <img class="logo__text" src="images/logo/logo-text-mobile.svg" width="101" height="18" alt="Логотип Cat Energy текстовый">
+    </a>
+    <button class="header__toggle-button toggle-button" type="button" id="header-menu" onclick="toggleMenu()">
+      <span class="visually-hidden">Показать меню</span>
+      <span class="toggle-button__line"></span>
+    </button>
+    <nav class="header__navigation" id="header-navigation">
+      <ul class="navigation-list">
+        <li class="navigation-list__item">
+          <a class="navigation-list__link" href="index.html">Главная</a>
+        </li>
+        <li class="navigation-list__item">
+          <a class="navigation-list__link navigation-list__link--active" href="catalog.html">Каталог продукции</a>
+        </li>
+        <li class="navigation-list__item">
+          <a class="navigation-list__link" href="#">Подбор программы</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
     <main class="main main--catalog">
       <section class="catalog">
         <h1 class="catalog__title">Каталог продукции</h1>
@@ -193,50 +194,54 @@
       </section>
       <section class="extra-product">
         <h2 class="extra-product__title">Дополнительные товары</h2>
-        <ul class="extra-product__list">
-          <li class="extra-product__item">
-            <h3 class="extra-product__item-title">Сахарозаменитель</h3>
-            <p class="extra-product__item-subtitle">1 упаковка (100 г)</p>
-            <p class="extra-product__item-price">200 ₽</p>
-            <a class="extra-product__item-link button" href="#">Заказать</a>
-          </li>
-          <li class="extra-product__item">
-            <h3 class="extra-product__item-title">Питьевая вода</h3>
-            <p class="extra-product__item-subtitle">5 литров</p>
-            <p class="extra-product__item-price">50 ₽</p>
-            <a class="extra-product__item-link button" href="#">Заказать</a>
-          </li>
-          <li class="extra-product__item">
-            <h3 class="extra-product__item-title">Молоко</h3>
-            <p class="extra-product__item-subtitle">1 литр</p>
-            <p class="extra-product__item-price">100 ₽</p>
-            <a class="extra-product__item-link button" href="#">Заказать</a>
-          </li>
-          <li class="extra-product__item">
-            <h3 class="extra-product__item-title">Витамины</h3>
-            <p class="extra-product__item-subtitle">1 упаковка (30 г)</p>
-            <p class="extra-product__item-price">300 ₽</p>
-            <a class="extra-product__item-link button" href="#">Заказать</a>
-          </li>
-        </ul>
+        <div class="container">
+          <ul class="extra-product__list">
+            <li class="extra-product__item">
+              <h3 class="extra-product__item-title">Сахарозаменитель</h3>
+              <p class="extra-product__item-subtitle">1 упаковка (100 г)</p>
+              <p class="extra-product__item-price">200 ₽</p>
+              <a class="extra-product__item-link button" href="#">Заказать</a>
+            </li>
+            <li class="extra-product__item">
+              <h3 class="extra-product__item-title">Питьевая вода</h3>
+              <p class="extra-product__item-subtitle">5 литров</p>
+              <p class="extra-product__item-price">50 ₽</p>
+              <a class="extra-product__item-link button" href="#">Заказать</a>
+            </li>
+            <li class="extra-product__item">
+              <h3 class="extra-product__item-title">Молоко</h3>
+              <p class="extra-product__item-subtitle">1 литр</p>
+              <p class="extra-product__item-price">100 ₽</p>
+              <a class="extra-product__item-link button" href="#">Заказать</a>
+            </li>
+            <li class="extra-product__item">
+              <h3 class="extra-product__item-title">Витамины</h3>
+              <p class="extra-product__item-subtitle">1 упаковка (30 г)</p>
+              <p class="extra-product__item-price">300 ₽</p>
+              <a class="extra-product__item-link button" href="#">Заказать</a>
+            </li>
+          </ul>
+        </div>
         <div class="extra-product__present">
           <p class="extra-product__present-title">Закажите все и получите чехол для кота в подарок!</p>
         </div>
       </section>
       <section class="subscription">
         <h2 class="subscription__title">Акции и новинки</h2>
-        <p class="subscription__subtitle">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
-        <form class="subscription__form form" action="https://echo.htmlacademy.ru/" method="post">
-          <label class="visually-hidden" for="form-email">Введите адрес почты</label>
-          <input class="form__input" type="email" id="form-email" name="email" placeholder="kuklachev@gmail.com">
-          <button class="form__button button" type="submit">Подписаться</button>
-        </form>
+          <div class="container">
+            <p class="subscription__subtitle">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
+            <form class="subscription__form form" action="https://echo.htmlacademy.ru/" method="post">
+              <label class="visually-hidden" for="form-email">Введите адрес почты</label>
+              <input class="form__input" type="email" id="form-email" name="email" placeholder="kuklachev@gmail.com">
+              <button class="form__button button" type="submit">Подписаться</button>
+            </form>
+          </div>
       </section>
     </main>
     <footer class="footer footer--catalog">
       <section class="map map--catalog">
         <h2 class="visually-hidden">Адрес магазина</h2>
-        <div class="map__address">
+        <div class="map__address container">
           <p class="map__address-title">Приглашаем к сотрудничеству дилеров!</p>
           <address class="address">
             <span class="address__element">ул. Большая Конюшенная, д. 19/8</span>
@@ -252,28 +257,30 @@
         </div>
       </section>
       <section class="contacts">
-        <h2 class="visually-hidden">Контакты</h2>
-        <a class="contacts__logo logo" href="index.html">
-          <img class="logo__text" src="/" width="100" height="100" alt="Логотип продукта текстовый">
-        </a>
-        <ul class="link-list">
-          <li class="link-list__item">
-            <a class="link-list__link link-list__link--vk" href="https://vk.com/htmlacademy">
-              <span class="visually-hidden">Мы в Vkontakte</span>
-            </a>
-          </li>
-          <li class="link-list__item">
-            <a class="link-list__link link-list__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-              <span class="visually-hidden">Мы в Youtube</span>
-            </a>
-          </li>
-          <li class="link-list__item">
-            <a class="link-list__link link-list__link--telegram" href="https://t.me/htmlacademy">
-              <span class="visually-hidden">Мы в Telegram</span>
-            </a>
-          </li>
-        </ul>
-        <a class="developer-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <div class="container">
+          <h2 class="visually-hidden">Контакты</h2>
+          <a class="contacts__logo logo" href="index.html">
+            <img class="logo__text" src="images/logo/logo-text-mobile.svg" width="101" height="18" alt="Логотип продукта текстовый">
+          </a>
+          <ul class="link-list">
+            <li class="link-list__item">
+              <a class="link-list__link link-list__link--vk" href="https://vk.com/htmlacademy">
+                <span class="visually-hidden">Мы в Vkontakte</span>
+              </a>
+            </li>
+            <li class="link-list__item">
+              <a class="link-list__link link-list__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+                <span class="visually-hidden">Мы в Youtube</span>
+              </a>
+            </li>
+            <li class="link-list__item">
+              <a class="link-list__link link-list__link--telegram" href="https://t.me/htmlacademy">
+                <span class="visually-hidden">Мы в Telegram</span>
+              </a>
+            </li>
+          </ul>
+          <a class="developer-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        </div>
       </section>
     </footer>
   </body>
