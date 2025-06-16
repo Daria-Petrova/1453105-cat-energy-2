@@ -1,7 +1,14 @@
 .navigation-list {
   background-color: inherit;
+  text-align: center;
 
   @include reset-list;
+}
+
+
+.navigation-list__item {
+  padding: 22px 20px 24px;
+  border-bottom: 1px solid #d9d9d9;
 }
 
 .navigation-list__link {
