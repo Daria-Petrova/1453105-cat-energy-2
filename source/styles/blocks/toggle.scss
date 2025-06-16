@@ -1,0 +1,18 @@
+.toggle {
+
+  &--none-js {
+    display: none;
+  }
+}
+
+.toggle__button {
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.toggle__line {
+  height: 2px;
+}

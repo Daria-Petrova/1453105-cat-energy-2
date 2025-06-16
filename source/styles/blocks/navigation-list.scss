@@ -3,6 +3,10 @@
   text-align: center;
 
   @include reset-list;
+
+  &--closed {
+    display: none;
+  }
 }
 
 

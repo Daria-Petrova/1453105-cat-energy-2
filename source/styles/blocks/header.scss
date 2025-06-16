@@ -6,11 +6,11 @@
 
 .header__navigation {
   display: grid;
-  grid-template-columns: 1fr 1fr auto;
+  grid-template-columns: 1fr minmax(24px, auto);
   grid-template-rows: 66px 1fr;
   grid-template-areas:
-   "logo       logo       toggle"
-   "navigation navigation navigation";
+   "logo       toggle"
+   "navigation navigation";
 }
 
 .header__logo {
@@ -28,4 +28,5 @@
 .header__navigation-list {
   grid-area: navigation;
   align-content: center;
+  border-top: 1px solid #d9d9d9;
 }
