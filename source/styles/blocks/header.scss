@@ -11,6 +11,23 @@
   grid-template-areas:
    "logo       toggle"
    "navigation navigation";
+  background-color: $secondary-color;
+
+  &--js {
+    .header__navigation-list {
+      position: absolute;
+      top: 66px;
+    }
+  }
+
+  &--none-js {
+    .header__navigation-list {
+      display: block;
+    }
+    .header__toggle {
+      display: none;
+    }
+  }
 }
 
 .header__logo {
