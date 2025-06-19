@@ -1,14 +1,15 @@
 .toggle {
-
   &--open {
     .toggle__line {
       background-color: transparent;
       transition: background-color 0.2s;
     }
+
     .toggle__line::before {
-      transform: rotate(45deg) translate(0, 0);
+      transform: rotate(45deg) translate(-1px, 0);
       transition: transform 0.3s;
     }
+
     .toggle__line::after {
       transform: rotate(-45deg) translate(2px, -2px);
       transition: transform 0.3s;

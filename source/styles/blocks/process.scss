@@ -4,8 +4,53 @@
 
 .process__list {
   @include reset-list;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
 
 .process__list-title {
   @include font-decore($second-font, 14px, 1.18, 400, $basic-text-color);
+  margin: 0;
+}
+
+.process__list-item {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 20px;
+  align-content: start;
+
+  &::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+  }
+
+  &--healthy {
+    &::before {
+      background: $accent-color url("../../icons/icon-leaf.svg") no-repeat center;
+      background-size: 30px 30px;
+    }
+  }
+
+  &--easy {
+    &::before {
+      background: $accent-color url("../../icons/icon-powder.svg") no-repeat center;
+      background-size: 30px 30px;
+    }
+  }
+
+  &--exchange {
+    &::before {
+      background: $accent-color url("../../icons/icon-cutlery.svg") no-repeat center;
+      background-size: 30px 30px;
+    }
+  }
+
+  &--time {
+    &::before {
+      background: $accent-color url("../../icons/icon-clock.svg") no-repeat center;
+      background-size: 30px 30px;
+    }
+  }
 }

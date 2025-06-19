@@ -5,5 +5,7 @@ function toggleMenu() {
   btn.classList.toggle('toggle--open');
   menu.classList.toggle('navigation-list--closed');
 }
-toggleMenu()
 
+document.addEventListener('load', () => {
+  toggleMenu();
+});

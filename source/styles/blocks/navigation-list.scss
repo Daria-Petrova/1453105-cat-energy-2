@@ -20,4 +20,20 @@
   @include font-decore($main-font, 20px, 1, 400, $based-color);
   text-transform: uppercase;
   text-decoration: none;
+  opacity: 1;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.6;
+    transition: opacity 0.3s;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition: opacity 0.3s;
+  }
+
+  &--active {
+    color: $accent-color;
+  }
 }

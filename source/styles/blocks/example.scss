@@ -12,6 +12,7 @@
 
 .example__list {
   @include reset-list;
+  margin: 0 20px;
 }
 
 .example__list-item {

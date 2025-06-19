@@ -6,11 +6,10 @@
 
 .header__navigation {
   display: grid;
-  grid-template-columns: 1fr minmax(24px, auto);
-  grid-template-rows: 66px 1fr;
+  grid-template: 66px 1fr / 1fr minmax(24px, auto);
   grid-template-areas:
-   "logo       toggle"
-   "navigation navigation";
+    "logo       toggle"
+    "navigation navigation";
   background-color: $secondary-color;
 
   &--js {
@@ -24,6 +23,7 @@
     .header__navigation-list {
       display: block;
     }
+
     .header__toggle {
       display: none;
     }
