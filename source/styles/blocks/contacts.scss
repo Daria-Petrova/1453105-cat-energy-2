@@ -1,4 +1,33 @@
+
+.contacts {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.contacts__logo {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.contacts__links {
+  border-bottom: 1px solid #d9d9d9;
+}
+
 .developer-link {
   @include font-decore($second-font, 16px, 1.25, 400, $basic-text-color);
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &::after {
+    content: "";
+    display: block;
+    mask: url("../../icons/icon-html-logo.svg");
+    background-color: $third-text-color;
+    width: 27px;
+    height: 34px;
+  }
 }

@@ -1,9 +1,24 @@
+.map__wrapper {
+  display: flex;
+  justify-content: center;
+
+  &--fake {
+    width: 100%;
+  }
+}
+
 .map {
   background-color: $secondary-color;
 
   &--catalog {
     background-color: $basic-bg-color;
+
   }
+}
+
+.map__image {
+  width: 100%;
+  display: block;
 }
 
 .map__address-title {

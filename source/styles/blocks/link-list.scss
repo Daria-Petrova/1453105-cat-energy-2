@@ -1,3 +1,46 @@
 .link-list {
   @include reset-list;
+  display: flex;
+  padding: 10px 0;
+  justify-content: center;
+  gap: 20px;
+}
+
+.link-list__link {
+
+  &::before {
+    content: "";
+    display: block;
+    width: 28px;
+    height: 22px;
+    background-color: $third-text-color;
+  }
+
+  &:hover {
+    &::before {
+      background-color: $accent-color;
+    }
+  }
+
+  &--vk {
+    &::before {
+      mask: url("../../icons/icon-vk.svg");
+    }
+  }
+
+  &--youtube {
+    &::before {
+      mask: url("../../icons/icon-youtube.svg");
+    }
+  }
+
+  &--telegram {
+    &::before {
+      mask: url("../../icons/icon-tg.svg");
+    }
+  }
+
+
+
+
 }
