@@ -1,5 +1,11 @@
+.process {
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
 .process__title {
   @include font-decore($main-font, 36px, 1.4, 400, $based-color);
+  margin: 0 0 40px;
 }
 
 .process__list {

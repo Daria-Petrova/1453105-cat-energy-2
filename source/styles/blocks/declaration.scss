@@ -13,15 +13,31 @@
       linear-gradient(to right, #504f54, #434247);
     background-size: auto, auto 320px, auto;
   }
+  padding-bottom: 20px;
 }
 
 .declaration__title {
   @include font-decore($main-font, 36px, 1, 400, $secondary-color);
   text-align: center;
+  margin: 0;
+  padding: 27px 0 25px;
 }
 
 .declaration__subtitle {
   @include font-decore($main-font, 14px, 1, 400, $secondary-color);
   text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 30px;
+}
+
+.declaration__image {
+  display: block;
+  margin: 0 auto;
+}
+
+.declaration__link {
+  display: block;
+  margin: 0 20px;
   text-align: center;
 }

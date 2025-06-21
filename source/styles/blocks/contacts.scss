@@ -1,7 +1,7 @@
-
 .contacts {
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  padding-top: 20px;
 }
 
 .contacts__logo {
@@ -9,10 +9,14 @@
   grid-template-columns: 1fr;
   align-items: center;
   border-bottom: 1px solid #d9d9d9;
+  padding: 20px 0;
 }
 
 .contacts__links {
   border-bottom: 1px solid #d9d9d9;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
 }
 
 .developer-link {
@@ -21,6 +25,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 20px 0;
 
   &::after {
     content: "";
@@ -29,5 +34,22 @@
     background-color: $third-text-color;
     width: 27px;
     height: 34px;
+    transition: background-color 0.3s;
+  }
+
+  &:hover,
+  &:focus-visible {
+    &::after {
+      background-color: $accent-color;
+      transition: background-color 0.3s;
+    }
+  }
+
+  &:active {
+   opacity: 0.3;
+    &::after {
+      background-color: $accent-color;
+      transition: background-color 0.3s;
+    }
   }
 }

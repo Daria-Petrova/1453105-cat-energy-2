@@ -1,26 +1,62 @@
 .example {
   background-color: #eaeaea;
+  padding: 25px 0 40px;
 }
 
 .example__title {
   @include font-decore($main-font, 36px, 1.4, 400, $based-color);
+  padding: 0 20px 40px;
+  margin: 0;
 }
 
 .example__subtitle {
   @include font-decore($second-font, 14px, 1.29, 400, $basic-text-color);
+  padding: 0 20px;
+  margin: 0;
 }
 
 .example__list {
   @include reset-list;
-  margin: 0 20px;
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .example__list-item {
   @include font-decore($main-font, 24px, 1, 400, $based-color);
   text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+  align-items: center;
+  padding: 10px;
+
+
+  &::after {
+    @include font-decore($second-font, 12px, 1, 400, $basic-text-color);
+    text-transform: lowercase;
+  }
+
+  &--weight {
+    &::after {
+      content: "Снижение веса";
+    }
+  }
+  &--duration {
+    &::after {
+      content: "Затрачено времени";
+    }
+  }
 }
 
 .example__sum {
   @include font-decore($main-font, 14px, 1.4, 400, $based-color);
   text-transform: uppercase;
+  margin: 0 20px 20px;
+  text-align: center;
+}
+
+.example__slider {
+  margin: 0 20px;
 }

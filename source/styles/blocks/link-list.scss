@@ -1,24 +1,35 @@
 .link-list {
   @include reset-list;
+  max-width: 300px;
   display: flex;
-  padding: 10px 0;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 5px 20px;
+  align-self: center;
 }
 
 .link-list__link {
-
   &::before {
     content: "";
     display: block;
     width: 28px;
     height: 22px;
     background-color: $third-text-color;
+    transition: background-color 0.3s;
   }
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     &::before {
       background-color: $accent-color;
+      transition: background-color 0.3s;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: rgba(105, 184, 57, 0.6);
+      transition: background-color 0.3s;
     }
   }
 
@@ -39,8 +50,4 @@
       mask: url("../../icons/icon-tg.svg");
     }
   }
-
-
-
-
 }

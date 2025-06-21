@@ -1,3 +1,9 @@
 .address {
-  // empty style
+  display: flex;
+  flex-direction: column;
+}
+
+.address__element {
+  @include font-decore($second-font, 14px, 1.43, 400, $basic-text-color);
+  font-style: normal;
 }
