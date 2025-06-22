@@ -5,4 +5,9 @@
   text-decoration: none;
   padding: 10px 0;
   text-align: center;
+
+  @include tablet-size {
+    font-size: 20px;
+    line-height: 1.3;
+  }
 }
