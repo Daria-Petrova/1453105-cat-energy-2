@@ -1,18 +1,45 @@
 .example {
   background-color: #eaeaea;
   padding: 25px 0 40px;
+
+  @include tablet-size {
+    background: linear-gradient(to top, #eaeaea 462px, $secondary-color 463px);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      "title title"
+      "subtitle subtitle"
+      "list sum"
+      "slider slider";
+    padding: 45px 0 100px ;
+  }
 }
 
 .example__title {
   @include font-decore($main-font, 36px, 1.4, 400, $based-color);
   padding: 0 20px 40px;
   margin: 0;
+
+  @include tablet-size {
+    grid-area: title;
+    font-size: 60px;
+    line-height: 1;
+    padding: 0 30px 60px;
+  }
 }
 
 .example__subtitle {
   @include font-decore($second-font, 14px, 1.29, 400, $basic-text-color);
   padding: 0 20px;
   margin: 0;
+
+  @include tablet-size {
+    grid-area: subtitle;
+    font-size: 16px;
+    line-height: 1.5;
+    padding-bottom: 55px;
+  }
 }
 
 .example__list {
@@ -21,6 +48,11 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  @include tablet-size {
+    grid-area: list;
+    margin: 0 0 0 30px;
+  }
 }
 
 .example__list-item {
@@ -48,6 +80,11 @@
       content: "Затрачено времени";
     }
   }
+
+  @include tablet-size {
+    font-size: 30px;
+    line-height: 1.2;
+  }
 }
 
 .example__sum {
@@ -55,8 +92,20 @@
   text-transform: uppercase;
   margin: 0 20px 20px;
   text-align: center;
+
+  @include tablet-size {
+    grid-area: sum;
+    font-size: 20px;
+    line-height: 1;
+    margin: 0 30px 0 0;
+  }
 }
 
 .example__slider {
   margin: 0 20px;
+
+  @include tablet-size {
+    grid-area: slider;
+    margin-top: 100px;
+  }
 }

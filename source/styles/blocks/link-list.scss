@@ -6,6 +6,10 @@
   justify-content: center;
   gap: 5px 20px;
   align-self: center;
+
+  @include tablet-size {
+    max-width: 350px;
+  }
 }
 
 .link-list__link {

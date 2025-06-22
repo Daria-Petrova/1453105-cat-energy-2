@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 
 .slider {
@@ -10,13 +11,19 @@
 }
 
 .slider__list-item {
-  width: auto;
-  height: auto;
-  overflow: hidden;
+  &--after {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .slider__list-image {
-  width: 280px;
   display: block;
   margin: 0 auto;
 }
