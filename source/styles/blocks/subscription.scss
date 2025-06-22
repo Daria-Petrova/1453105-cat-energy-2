@@ -1,8 +1,18 @@
+.subscription {
+  margin-bottom: 40px;
+}
 .subscription__title {
   @include font-decore($main-font, 24px, 1, 400, $based-color);
-  text-transform: uppercase;
 }
 
 .subscription__subtitle {
   @include font-decore($main-font, 16px, 1.5, 400, $based-color);
+  text-align: center;
+}
+
+.subscription__form {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 1fr;
+  gap: 16px;
 }

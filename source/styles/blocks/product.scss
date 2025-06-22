@@ -1,10 +1,30 @@
+.product {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "image title"
+    "image definition"
+    "link  link";
+}
+
+.product__image-link {
+  grid-area: image;
+}
+
 .product__title {
   @include font-decore($main-font, 16px, 1.25, 400, $second-text-color);
   text-transform: uppercase;
+
 }
 
 .product__title-link {
   text-decoration: none;
+  grid-area: title;
+}
+
+.product__definition {
+  grid-area: definition;
 }
 
 .product__definition-name {
@@ -17,4 +37,5 @@
 
 .product__link {
   text-decoration: none;
+  grid-area: link;
 }

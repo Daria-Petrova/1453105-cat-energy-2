@@ -20,7 +20,7 @@
   @include font-decore($main-font, 36px, 1, 400, $secondary-color);
   text-align: center;
   margin: 0;
-  padding: 27px 0 25px;
+  padding: 27px 20px 25px;
 }
 
 .declaration__subtitle {
@@ -28,7 +28,7 @@
   text-transform: uppercase;
   text-align: center;
   margin: 0;
-  padding-bottom: 30px;
+  padding: 0 20px 30px;
 }
 
 .declaration__image {

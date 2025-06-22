@@ -62,9 +62,11 @@
   text-transform: uppercase;
   text-decoration: none;
   grid-area: link;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto minmax(40px, 1fr);
   align-items: center;
   gap: 15px;
+  max-width: 50%;
 
   &::after {
     content: "";
