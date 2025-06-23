@@ -1,1 +1,1 @@
-function n(){let t=document.getElementsByClassName("toggle__button")[0],e=document.getElementsByClassName("header__navigation-list")[0];t.classList.toggle("toggle--open"),e.classList.toggle("navigation-list--closed")}document.addEventListener("load",()=>{n()});
+document.getElementById("toggle-button").addEventListener("click",()=>{let t=document.getElementById("toggle-button"),e=document.getElementById("toggle-menu");t.classList.toggle("toggle--open"),e.classList.toggle("navigation-list--closed")});
