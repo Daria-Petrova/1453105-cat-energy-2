@@ -1,0 +1,1 @@
+function n(){let t=document.getElementById("toggle-button"),e=document.getElementById("toggle-menu");t.classList.toggle("toggle--open"),e.classList.toggle("navigation-list--closed")}document.addEventListener("load",()=>{n()});
