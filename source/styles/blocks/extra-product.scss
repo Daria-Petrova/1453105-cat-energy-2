@@ -1,5 +1,21 @@
+.extra-product {
+  @include desktop-size {
+    display: grid;
+    grid-template-columns: 1fr 245px;
+    grid-template-rows: auto 1fr;
+    gap: 0 80px;
+    grid-template-areas:
+      "title title"
+      "list  image";
+  }
+}
+
 .extra-product__title {
   @include font-decore($main-font, 24px, 1, 400, $based-color);
+
+  @include desktop-size {
+    grid-area: title;
+  }
 }
 
 .extra-product__list {
@@ -7,6 +23,12 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  @include desktop-size {
+    grid-area: list;
+    gap: 0;
+    border-top: 1px solid #d9d9d9;
+  }
 }
 
 .extra-product__item {
@@ -20,6 +42,16 @@
     "link     link";
   padding-bottom: 20px;
   border-bottom: 1px solid #d9d9d9;
+
+  @include desktop-size {
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3, 1fr) 245px;
+    gap: 40px;
+    grid-template-areas:
+      "title subtitle price link";
+    padding: 17px 0;
+    align-items: center;
+  }
 }
 .extra-product__item-title {
   @include font-decore($main-font, 16px, 1, 400, $second-text-color);
@@ -46,6 +78,12 @@
   text-decoration: none;
   display: block;
   grid-area: link;
+
+  @include desktop-size {
+    padding: 7px 0 ;
+  }
+
+
 }
 
 .extra-product__present {
@@ -67,6 +105,12 @@
   @include tablet-size {
     background-position: center center;
     background-size: auto, cover;
+    margin-bottom: 0;
+  }
+
+  @include desktop-size {
+    grid-area: image;
+    margin: 0;
   }
 }
 

@@ -5,6 +5,10 @@
     padding: 80px 64px;
     margin: 0;
   }
+
+  @include desktop-size {
+    margin: 0 auto;
+  }
 }
 .subscription__title {
   @include font-decore($main-font, 24px, 1, 400, $based-color);

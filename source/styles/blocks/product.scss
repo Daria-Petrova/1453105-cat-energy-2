@@ -8,7 +8,7 @@
     "link  link";
 
   @include tablet-size {
-    grid-template-columns:  minmax(auto, 324px);
+    grid-template-columns: auto;
     grid-template-rows: repeat(5, auto);
     grid-template-areas:
       "image"
@@ -16,6 +16,13 @@
       "definition"
       "link";
     background-image: linear-gradient(to bottom,  $secondary-color 81px, $basic-bg-color 81px);
+    max-width: 324px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  @include desktop-size {
+    max-width: 245px;
   }
 }
 

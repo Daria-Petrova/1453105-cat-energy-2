@@ -1,5 +1,11 @@
 .show-product__block {
   padding-top: 20px;
+
+  @include tablet-size {
+    max-width: 324px;
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 .show-product__title {

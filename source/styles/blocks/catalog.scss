@@ -1,5 +1,9 @@
 .catalog  {
 
+  @include desktop-size {
+    max-width: 1220px;
+    margin: 0 auto;
+  }
 }
 
 .catalog__title {
@@ -12,6 +16,10 @@
   @include tablet-size {
     border: none;
   }
+
+  @include desktop-size {
+    padding: 74px 0 84px;
+  }
 }
 
 .catalog__list {
@@ -23,6 +31,12 @@
     gap: 60px;
     margin: 0 30px;
   }
+
+  @include desktop-size {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
+    margin: initial;
+  }
 }
 
 .catalog__item {
@@ -31,5 +45,6 @@
 
   @include tablet-size {
     border-bottom: none;
+    padding: 0;
   }
 }

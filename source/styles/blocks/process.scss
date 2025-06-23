@@ -7,6 +7,11 @@
     padding-bottom: 47px;
     border-bottom: 1px solid #d9d9d9;
   }
+
+  @include desktop-size {
+    margin: 0 auto;
+    border-bottom: none;
+  }
 }
 
 .process__title {
@@ -18,6 +23,10 @@
      line-height: 1;
      margin: 0 30px 72px;
    }
+
+  @include desktop-size {
+    margin: 71px 0 32px;
+  }
 }
 
 .process__list {
@@ -33,6 +42,13 @@
     counter-reset: item 0;
     justify-content: left;
     margin: 0 30px;
+  }
+
+  @include desktop-size {
+    margin: 0;
+    grid-template-columns: repeat(4, 1fr);
+    //grid-template-rows: 1fr;
+    gap: 40px 90px;
   }
 }
 
