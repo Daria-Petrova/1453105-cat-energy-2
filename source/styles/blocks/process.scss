@@ -3,7 +3,7 @@
   margin-top: 20px;
 
   @include tablet-size {
-    margin:45px 0 0;
+    margin: 45px 0 0;
     padding-bottom: 47px;
     border-bottom: 1px solid #d9d9d9;
   }
@@ -18,11 +18,11 @@
   @include font-decore($main-font, 36px, 1.4, 400, $based-color);
   margin: 0 0 40px;
 
-   @include tablet-size {
-     font-size: 60px;
-     line-height: 1;
-     margin: 0 30px 72px;
-   }
+  @include tablet-size {
+    font-size: 60px;
+    line-height: 1;
+    margin: 0 30px 72px;
+  }
 
   @include desktop-size {
     margin: 71px 0 32px;
@@ -99,8 +99,7 @@
 
   @include tablet-size {
     max-width: 227px;
-    grid-template-rows: 80px 1fr;
-    grid-template-columns: 80px 1fr;
+    grid-template: 80px 1fr / 80px 1fr;
     grid-template-areas:
       "image ."
       "title title";
@@ -114,12 +113,12 @@
     &::after {
       grid-column: 2 /-1;
       grid-row: 1 /-1;
-      align-self: start;
       padding: 0;
       margin-top: -30%;
-      justify-self: right;
+      place-self: start right;
       content: counter(item);
       display: block;
+
       @include font-decore($main-font, 280px, 1, 400, $basic-bg-color);
       z-index: -1;
     }

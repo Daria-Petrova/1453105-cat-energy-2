@@ -5,19 +5,17 @@
   @include tablet-size {
     background: linear-gradient(to top, #eaeaea 462px, $secondary-color 463px);
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(4, auto) / repeat(2, 1fr);
     grid-template-areas:
-      "title title"
+      "title    title"
       "subtitle subtitle"
-      "list sum"
-      "slider slider";
-    padding: 45px 0 100px ;
+      "list     sum"
+      "slider   slider";
+    padding: 45px 0 100px;
   }
 
   @include desktop-size {
-    grid-template-columns: 1fr 610px 610px 1fr;
-    grid-template-rows: repeat(4, auto);
+    grid-template: repeat(4, auto) / 1fr 610px 610px 1fr;
     grid-template-areas:
       ". title    slider ."
       ". subtitle slider ."
@@ -80,7 +78,7 @@
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
+  border: 1px solid #ff0000;
   align-items: center;
   padding: 10px;
 
@@ -95,6 +93,7 @@
       content: "Снижение веса";
     }
   }
+
   &--duration {
     &::after {
       content: "Затрачено времени";

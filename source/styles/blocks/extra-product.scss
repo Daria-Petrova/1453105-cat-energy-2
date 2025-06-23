@@ -1,8 +1,7 @@
 .extra-product {
   @include desktop-size {
     display: grid;
-    grid-template-columns: 1fr 245px;
-    grid-template-rows: auto 1fr;
+    grid-template: auto 1fr / 1fr 245px;
     gap: 0 80px;
     grid-template-areas:
       "title title"
@@ -34,8 +33,7 @@
 .extra-product__item {
   display: grid;
   gap: 15px 0;
-  grid-template-rows: repeat(3, auto);
-  grid-template-columns: repeat(2, 1fr);
+  grid-template: repeat(3, auto) /  repeat(2, 1fr);
   grid-template-areas:
     "title    title"
     "subtitle price"
@@ -44,15 +42,14 @@
   border-bottom: 1px solid #d9d9d9;
 
   @include desktop-size {
-    grid-template-rows: auto;
-    grid-template-columns: repeat(3, 1fr) 245px;
+    grid-template: auto / repeat(3, 1fr) 245px;
     gap: 40px;
-    grid-template-areas:
-      "title subtitle price link";
+    grid-template-areas: "title subtitle price link";
     padding: 17px 0;
     align-items: center;
   }
 }
+
 .extra-product__item-title {
   @include font-decore($main-font, 16px, 1, 400, $second-text-color);
   text-transform: uppercase;
@@ -80,10 +77,8 @@
   grid-area: link;
 
   @include desktop-size {
-    padding: 7px 0 ;
+    padding: 7px 0;
   }
-
-
 }
 
 .extra-product__present {

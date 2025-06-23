@@ -3,7 +3,7 @@
   text-align: center;
   width: 100%;
   color: inherit;
-  border-color: inherit;
+
 
   @include reset-list;
 
@@ -19,11 +19,11 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px 33px;
-    align-content: center;
-    justify-content: end;
+    place-content: center end;
   }
 
   @include desktop-size {
+    border-color: inherit;
     background-color: transparent;
   }
 }

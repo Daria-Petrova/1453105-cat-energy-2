@@ -12,17 +12,6 @@
     "navigation navigation";
   background-color: $secondary-color;
 
-  &--js {
-    .header__navigation-list {
-      position: absolute;
-      top: 66px;
-
-      @include tablet-size {
-        position: initial;
-      }
-    }
-  }
-
   &--none-js {
     .header__navigation-list {
       display: block;
@@ -43,7 +32,7 @@
 
   @include desktop-size {
     grid-template-columns: 1fr 610px 610px 1fr;
-    grid-template-areas: ". logo navigation ." ;
+    grid-template-areas: ". logo navigation .";
     gap: 0;
     margin: 0;
     border-color: $accent-color;
@@ -51,9 +40,20 @@
 
   &--main {
     @include desktop-size {
-      background-image: linear-gradient( to right, $secondary-color 50%, $accent-color 50%);
+      background-image: linear-gradient(to right, $secondary-color 50%, $accent-color 50%);
       color: $secondary-color;
       border-color: $secondary-color;
+    }
+  }
+}
+
+.header__navigation--js {
+  .header__navigation-list {
+    position: absolute;
+    top: 66px;
+
+    @include tablet-size {
+      position: initial;
     }
   }
 }
@@ -86,9 +86,5 @@
   @include tablet-size {
     border-top: none;
     margin-right: 30px;
-  }
-
-  @include desktop-size {
-
   }
 }
