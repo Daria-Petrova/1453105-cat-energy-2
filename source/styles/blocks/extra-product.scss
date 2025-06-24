@@ -11,6 +11,8 @@
 
 .extra-product__title {
   @include font-decore($main-font, 24px, 1, 400, $based-color);
+  margin: 0;
+  padding: 25px 0 36px;
 
   @include desktop-size {
     grid-area: title;
@@ -21,7 +23,9 @@
   @include reset-list;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 19px;
+  padding-bottom: 19px;
+  border-bottom: 1px solid #d9d9d9;
 
   @include desktop-size {
     grid-area: list;
@@ -38,8 +42,8 @@
     "title    title"
     "subtitle price"
     "link     link";
-  padding-bottom: 20px;
-  border-bottom: 1px solid #d9d9d9;
+  border-top: 1px solid #d9d9d9;
+  padding-top: 13px;
 
   @include desktop-size {
     grid-template: auto / repeat(3, 1fr) 245px;
@@ -82,7 +86,7 @@
 }
 
 .extra-product__present {
-  margin: 35px 0 40px;
+  margin: 35px 0 20px;
   background-image:
     linear-gradient(rgba(105, 184, 57, 0.85), rgba(105, 184, 57, 0.85)),
     url("../../images/decorate/backgrounds/bg-catalog-page-mobile@1x.png");

@@ -59,9 +59,9 @@
 .example__list {
   @include reset-list;
   margin: 20px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template: auto/ repeat(2, 1fr);
+  gap: 10px 32px;
 
   @include tablet-size {
     grid-area: list;
@@ -78,19 +78,24 @@
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
-  border: 1px solid #ff0000;
   align-items: center;
-  padding: 10px;
+  padding: 14px;
+  background-color: pink;
+  border: 1px solid red;
 
 
   &::after {
     @include font-decore($second-font, 12px, 1, 400, $basic-text-color);
     text-transform: lowercase;
+    background-color: yellow;
+    padding: 10px 15px 0;
+    margin-bottom: -25%;
+    text-align: center;
   }
 
   &--weight {
     &::after {
-      content: "Снижение веса";
+      content: "Снижение  веса веса веса веса веса";
     }
   }
 
@@ -105,6 +110,7 @@
     line-height: 1.2;
   }
 }
+
 
 .example__sum {
   @include font-decore($main-font, 14px, 1.4, 400, $based-color);

@@ -1,6 +1,6 @@
 .product {
   display: grid;
-  grid-template: repeat(3, auto) /  repeat(2, 1fr);
+  grid-template: auto 1fr auto /  repeat(2, 1fr);
   grid-template-areas:
     "image title"
     "image definition"
@@ -26,31 +26,47 @@
 
 .product__image-link {
   grid-area: image;
+  justify-self: center;
+}
+
+.product__image {
+  display: block;
 }
 
 .product__title {
   @include font-decore($main-font, 16px, 1.25, 400, $second-text-color);
   text-transform: uppercase;
+  margin: 0 0 14px;
+  padding-right: 50px;
 }
 
 .product__title-link {
   text-decoration: none;
   grid-area: title;
+  display: block;
 }
 
 .product__definition {
   grid-area: definition;
+  display: grid;
+  grid-template: auto / repeat(2, 1fr);
+  align-items: center;
+
 }
 
 .product__definition-name {
   @include font-decore($second-font, 12px, 1.33, 400, $basic-text-color);
+  margin: 0;
 }
 
 .product__definition-value {
   @include font-decore($second-font, 12px, 1.33, 400, $basic-text-color);
+  margin: 0;
+  justify-self: right;
 }
 
 .product__link {
   text-decoration: none;
   grid-area: link;
+  margin-top: 17px;
 }

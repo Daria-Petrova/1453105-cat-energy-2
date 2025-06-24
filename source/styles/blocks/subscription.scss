@@ -1,5 +1,5 @@
 .subscription {
-  margin-bottom: 40px;
+  padding: 20px 0 40px;
 
   @include tablet-size {
     padding: 80px 64px;
@@ -13,6 +13,8 @@
 
 .subscription__title {
   @include font-decore($main-font, 24px, 1, 400, $based-color);
+  margin: 0;
+  padding-bottom: 32px;
 
   @include tablet-size {
     font-size: 32px;
@@ -22,6 +24,8 @@
 .subscription__subtitle {
   @include font-decore($main-font, 16px, 1.5, 400, $based-color);
   text-align: center;
+  margin: 0;
+  padding-bottom: 24px;
 
   @include tablet-size {
     font-size: 24px;

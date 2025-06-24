@@ -35,7 +35,7 @@
 .map__address {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: 26px 0 6px;
+  padding: 26px 0 26px;
   gap: 4px;
 
   @include tablet-size {
