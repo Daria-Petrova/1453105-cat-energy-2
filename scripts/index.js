@@ -1,0 +1,1 @@
+document.getElementById("toggle-button").addEventListener("click",()=>{let t=document.getElementById("toggle-button"),e=document.getElementById("toggle-menu");t.classList.toggle("toggle--open"),e.classList.toggle("navigation-list--closed")});

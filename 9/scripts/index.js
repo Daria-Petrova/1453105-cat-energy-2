@@ -1,1 +1,0 @@
-function t(){let e=document.getElementById("header-menu"),n=document.getElementById("header-navigation");e.classList.toggle("toggle-button--open"),n.classList.toggle("header__navigation--open")}window.onload(()=>{t()});
