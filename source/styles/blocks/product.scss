@@ -7,7 +7,7 @@
     "link  link";
 
   @include tablet-size {
-    grid-template: repeat(5, auto) / auto;
+    grid-template: auto 1fr auto auto auto / auto;
     grid-template-areas:
       "image"
       "title"
@@ -17,6 +17,7 @@
     max-width: 324px;
     width: 100%;
     margin: 0 auto;
+    padding: 0 37px 40px;
   }
 
   @include desktop-size {
@@ -38,6 +39,14 @@
   text-transform: uppercase;
   margin: 0 0 14px;
   padding-right: 50px;
+
+  @include tablet-size {
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0;
+    padding: 0 47px 20px;
+  }
 }
 
 .product__title-link {
@@ -52,21 +61,47 @@
   grid-template: auto / repeat(2, 1fr);
   align-items: center;
 
+  @include tablet-size {
+
+  }
+
 }
 
 .product__definition-name {
   @include font-decore($second-font, 12px, 1.33, 400, $basic-text-color);
   margin: 0;
+
+  @include tablet-size {
+    font-size: 16px;
+    line-height: 1.25;
+    padding-bottom: 5px;
+    padding-top: 3px;
+    border-bottom: 1px solid #d9d9d9;
+  }
 }
 
 .product__definition-value {
   @include font-decore($second-font, 12px, 1.33, 400, $basic-text-color);
   margin: 0;
   justify-self: right;
+
+  @include tablet-size {
+    font-size: 16px;
+    line-height: 1.25;
+    padding-bottom: 5px;
+    padding-top: 3px;
+    border-bottom: 1px solid #d9d9d9;
+    text-align: end;
+    justify-self: normal;
+  }
 }
 
 .product__link {
   text-decoration: none;
   grid-area: link;
   margin-top: 17px;
+
+  @include tablet-size {
+    margin-top: 32px;
+  }
 }

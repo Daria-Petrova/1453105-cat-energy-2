@@ -4,6 +4,10 @@
   grid-template: repeat(2, 1fr)/ 1fr;
   gap: 20px;
 
+  @include tablet-size {
+    gap: 30px;
+  }
+
   @include desktop-size {
     grid-template-columns: repeat(2, 1fr);
     gap: 50px 80px;

@@ -52,7 +52,7 @@
     grid-area: subtitle;
     font-size: 16px;
     line-height: 1.5;
-    padding-bottom: 55px;
+    padding: 0 30px 55px;
   }
 }
 
@@ -60,12 +60,14 @@
   @include reset-list;
   margin: 20px;
   display: grid;
-  grid-template: auto/ repeat(2, 1fr);
+  grid-template: 1fr/ repeat(2, 1fr);
   gap: 10px 32px;
+  align-items: normal;
 
   @include tablet-size {
     grid-area: list;
     margin: 0 0 0 30px;
+    gap: 0;
   }
 
   @include desktop-size {
@@ -74,43 +76,54 @@
 }
 
 .example__list-item {
-  @include font-decore($main-font, 24px, 1, 400, $based-color);
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 14px;
-  background-color: pink;
-  border: 1px solid red;
+  max-width: 124px;
+  display: grid;
+  grid-template: 2fr 1fr / 1fr;
+  background-color: inherit;
 
-
-  &::after {
-    @include font-decore($second-font, 12px, 1, 400, $basic-text-color);
-    text-transform: lowercase;
-    background-color: yellow;
-    padding: 10px 15px 0;
-    margin-bottom: -25%;
-    text-align: center;
-  }
-
-  &--weight {
-    &::after {
-      content: "Снижение  веса веса веса веса веса";
-    }
-  }
-
-  &--duration {
-    &::after {
-      content: "Затрачено времени";
-    }
-  }
 
   @include tablet-size {
     font-size: 30px;
     line-height: 1.2;
+    max-width: 162px;
   }
 }
 
+.example__list-item-title {
+  @include font-decore($main-font, 24px, 1, 400, $based-color);
+  margin: 0;
+  text-transform: uppercase;
+  padding: 14px 14px 8px;
+  text-align: center;
+  align-content: center;
+  border: 1px solid #cdcdcd;
+  border-radius: 2px;
+  grid-column: 1/-1;
+  grid-row: 1/2;
+
+  @include tablet-size {
+    font-size: 30px;
+    line-height: 1.23;
+    padding: 15px;
+  }
+}
+
+.example__list-item-subtitle {
+  @include font-decore($second-font, 12px, 1, 400, $based-color);
+  margin: -5px 22px 0;
+  text-transform: lowercase;
+  text-align: center;
+  align-content: start;
+  grid-column: 1/-1;
+  grid-row: 2/-1;
+  background-color: #eaeaea;
+
+  @include tablet-size {
+    background-color: $secondary-color;
+    font-size: 14px;
+    margin: -7px 15px 0;
+  }
+}
 
 .example__sum {
   @include font-decore($main-font, 14px, 1.4, 400, $based-color);
@@ -123,6 +136,15 @@
     font-size: 20px;
     line-height: 1;
     margin: 0 30px 0 0;
+    justify-items: right;
+    padding-top: 11px;
+  }
+}
+
+.example__sum-item {
+  @include tablet-size {
+    display: block;
+    padding-top: 9px;
   }
 }
 

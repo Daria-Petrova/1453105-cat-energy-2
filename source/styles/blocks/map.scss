@@ -39,8 +39,8 @@
   gap: 4px;
 
   @include tablet-size {
-    gap: 44%;
-    padding: 60px 40px;
+    gap: 51%;
+    padding: 60px 40px 50px;
   }
 
   @include desktop-size {
