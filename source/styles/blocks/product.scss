@@ -7,12 +7,9 @@
     "link  link";
 
   @include tablet-size {
-    grid-template: auto 1fr auto auto auto / auto;
-    grid-template-areas:
-      "image"
-      "title"
-      "definition"
-      "link";
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-image: linear-gradient(to bottom, $secondary-color 81px, $basic-bg-color 81px);
     max-width: 324px;
     width: 100%;
@@ -28,6 +25,7 @@
 .product__image-link {
   grid-area: image;
   justify-self: center;
+  align-self: center;
 }
 
 .product__image {
@@ -53,6 +51,10 @@
   text-decoration: none;
   grid-area: title;
   display: block;
+
+   @include tablet-size {
+     flex-grow: 1;
+   }
 }
 
 .product__definition {
@@ -60,11 +62,6 @@
   display: grid;
   grid-template: auto / repeat(2, 1fr);
   align-items: center;
-
-  @include tablet-size {
-
-  }
-
 }
 
 .product__definition-name {
@@ -77,6 +74,7 @@
     padding-bottom: 5px;
     padding-top: 3px;
     border-bottom: 1px solid #d9d9d9;
+    align-self: self-end;
   }
 }
 
@@ -93,6 +91,7 @@
     border-bottom: 1px solid #d9d9d9;
     text-align: end;
     justify-self: normal;
+    align-self: self-end;
   }
 }
 
@@ -103,5 +102,8 @@
 
   @include tablet-size {
     margin-top: 32px;
+    align-content: center;
+    display: grid;
+    font-size: 16px;
   }
 }
