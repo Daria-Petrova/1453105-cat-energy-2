@@ -24,8 +24,7 @@
 
 .product__image-link {
   grid-area: image;
-  justify-self: center;
-  align-self: center;
+  place-self: center;
 
   @include desktop-size {
     padding-bottom: 12px;
@@ -60,9 +59,9 @@
   grid-area: title;
   display: block;
 
-   @include tablet-size {
-     flex-grow: 1;
-   }
+  @include tablet-size {
+    flex-grow: 1;
+  }
 }
 
 .product__definition {
@@ -98,8 +97,7 @@
     padding-top: 3px;
     border-bottom: 1px solid #d9d9d9;
     text-align: end;
-    justify-self: normal;
-    align-self: self-end;
+    place-self: self-end normal;
   }
 }
 

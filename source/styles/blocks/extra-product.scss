@@ -64,11 +64,12 @@
     border-bottom: 1px solid #d9d9d9;
     border-top: none;
     padding: 26px 38px 28px;
-    grid-template:  minmax(40px, 1fr) minmax(40px, auto)/ 5fr 3fr 1fr ;
+    grid-template: minmax(40px, 1fr) minmax(40px, auto)/ 5fr 3fr 1fr;
     gap: 5px 20px;
     grid-template-areas:
       "title subtitle price"
       "link  link     link";
+
     &:last-child {
       border-bottom: none;
     }
