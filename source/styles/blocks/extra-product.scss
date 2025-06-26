@@ -76,7 +76,7 @@
   }
 
   @include desktop-size {
-    grid-template: auto / repeat(3, 1fr) 245px;
+    grid-template: auto / 8fr auto 1fr 245px;
     gap: 40px;
     grid-template-areas: "title subtitle price link";
     padding: 17px 0;
