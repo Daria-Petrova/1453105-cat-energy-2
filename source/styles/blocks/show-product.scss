@@ -33,11 +33,16 @@
     line-height: 1.2;
     padding: 0 37px;
     margin-bottom: 23px;
+
     &::before {
       width: 60px;
       height: 60px;
       margin-bottom: 50px;
     }
+  }
+
+  @include desktop-size {
+    padding: 0;
   }
 }
 

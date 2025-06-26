@@ -15,12 +15,14 @@
   }
 
   @include desktop-size {
-    grid-template: repeat(4, auto) / 1fr 610px 610px 1fr;
+    grid-template: 1fr auto  auto auto / 1fr 610px 610px 1fr;
     grid-template-areas:
       ". title    slider ."
       ". subtitle slider ."
       ". list     slider ."
       ". sum      slider .";
+    padding-bottom: 75px;
+    background: linear-gradient(to top, $basic-bg-color 462px, $secondary-color 463px);
   }
 }
 
@@ -40,6 +42,7 @@
     max-width: 1220px;
     width: 100%;
     margin: 0 auto;
+    padding: 0 0 20px;
   }
 }
 
@@ -53,6 +56,10 @@
     font-size: 16px;
     line-height: 1.5;
     padding: 0 30px 55px;
+  }
+
+  @include desktop-size {
+    padding: 0 178px 69px 0;
   }
 }
 
@@ -72,6 +79,8 @@
 
   @include desktop-size {
     justify-content: left;
+    margin: 0;
+    max-width: 366px;
   }
 }
 
@@ -123,6 +132,10 @@
     font-size: 14px;
     margin: -7px 15px 0;
   }
+
+  @include desktop-size {
+    background-color: $basic-bg-color;
+  }
 }
 
 .example__sum {
@@ -139,12 +152,22 @@
     justify-items: right;
     padding-top: 11px;
   }
+
+  @include desktop-size {
+    display: flex;
+    align-items: end;
+    padding: 0;
+    margin: 15px 0 0;
+  }
 }
 
 .example__sum-item {
   @include tablet-size {
     display: block;
     padding-top: 9px;
+  }
+  @include desktop-size {
+    padding: 0;
   }
 }
 
@@ -158,5 +181,6 @@
 
   @include desktop-size {
     margin: 0;
+    padding-bottom: 10px;
   }
 }

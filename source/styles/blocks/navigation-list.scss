@@ -4,7 +4,6 @@
   width: 100%;
   color: inherit;
 
-
   @include reset-list;
 
   &--closed {
@@ -45,6 +44,13 @@
       border-bottom: 2px solid $accent-color;
     }
   }
+
+  @include desktop-size {
+    &:has(.navigation-list__link--active) {
+      border-bottom: 2px solid;
+      border-color: inherit;
+    }
+  }
 }
 
 .navigation-list__link {
@@ -80,6 +86,7 @@
 
     @include desktop-size {
       color: inherit;
+      border-color: inherit;
     }
   }
 }

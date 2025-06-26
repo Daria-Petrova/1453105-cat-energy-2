@@ -1,5 +1,6 @@
 .extra-product {
   @include desktop-size {
+    margin: 0 auto;
     display: grid;
     grid-template: auto 1fr / 1fr 245px;
     gap: 0 80px;
@@ -41,7 +42,10 @@
   @include desktop-size {
     grid-area: list;
     gap: 0;
+    border: none;
     border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+    justify-content: center;
   }
 }
 
@@ -60,7 +64,7 @@
     border-bottom: 1px solid #d9d9d9;
     border-top: none;
     padding: 26px 38px 28px;
-    grid-template:  minmax(40px, 1fr) minmax(40px, 1fr)/ 5fr 3fr 1fr ;
+    grid-template:  minmax(40px, 1fr) minmax(40px, auto)/ 5fr 3fr 1fr ;
     gap: 5px 20px;
     grid-template-areas:
       "title subtitle price"
@@ -182,12 +186,25 @@
     gap: 260px;
     text-align: start;
     align-items: center;
+    justify-content: space-between;
 
     &::before {
       margin: 0;
       width: 80px;
       height: 82px;
       flex-shrink: 0;
+    }
+  }
+
+  @include desktop-size {
+    gap: 0;
+    padding: 56px 42px 43px;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+
+    &::before {
+      margin-bottom: 46px;
     }
   }
 }

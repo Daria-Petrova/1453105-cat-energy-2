@@ -26,6 +26,10 @@
   grid-area: image;
   justify-self: center;
   align-self: center;
+
+  @include desktop-size {
+    padding-bottom: 12px;
+  }
 }
 
 .product__image {
@@ -44,6 +48,10 @@
     text-align: center;
     margin: 0;
     padding: 0 47px 20px;
+  }
+
+  @include desktop-size {
+    padding: 0 10px 23px;
   }
 }
 
