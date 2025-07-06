@@ -20,6 +20,7 @@
   &--none-js {
     .header__navigation-list {
       display: block;
+      position: initial;
     }
 
     .header__toggle {
@@ -51,22 +52,9 @@
 
   &--main {
     @include desktop-size {
-      //background-image: linear-gradient(to right,  rgba(255, 255, 255) 50%, rgba(104, 183, 56, 0.85) 50%),
-      //linear-gradient(to right, #504f54, #434247);
       color: $secondary-color;
       border-color: $secondary-color;
       background-color: transparent;
-    }
-  }
-}
-
-.header__navigation--js {
-  .header__navigation-list {
-    position: absolute;
-    top: 66px;
-
-    @include tablet-size {
-      position: initial;
     }
   }
 }
@@ -95,14 +83,12 @@
   grid-area: navigation;
   align-content: center;
   border-top: 1px solid #d9d9d9;
+  position: absolute;
+  top: 66px;
 
   @include tablet-size {
     border-top: none;
     margin-right: 30px;
+    position: initial;
   }
-}
-
-
-.header--hidden {
-  display: none;
 }
