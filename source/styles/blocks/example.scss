@@ -23,7 +23,7 @@
 }
 
 .example__title {
-  @include font-decore($main-font, 36px, 1.4, 400, $based-color);
+  @include font-decore($main-font, 36px, 1.2, 400, $based-color);
   padding-bottom: 40px;
   margin: 0;
 
@@ -39,7 +39,7 @@
 }
 
 .example__subtitle {
-  @include font-decore($second-font, 14px, 1.29, 400, $basic-text-color);
+  @include font-decore($second-font, 14px, 1.19, 400, $basic-text-color);
   padding-bottom: 20px;
   margin: 0;
 
@@ -99,9 +99,10 @@
   display: grid;
   grid-template: auto 1fr / 1fr;
   background-color: inherit;
-
+  max-width: 124px;
 
   @include tablet-size {
+    max-width: initial;
     font-size: 30px;
     line-height: 1.2;
   }
@@ -111,7 +112,7 @@
   @include font-decore($main-font, 24px, 1, 400, $based-color);
   margin: 0;
   text-transform: uppercase;
-  padding: 14px 14px 8px;
+  padding: 14px 14px 14px;
   text-align: center;
   align-content: center;
   border: 1px solid #cdcdcd;
@@ -122,7 +123,7 @@
   @include tablet-size {
     font-size: 30px;
     line-height: 1.23;
-    padding: 15px;
+    padding: 15px 28px;
   }
 }
 
@@ -139,7 +140,7 @@
   @include tablet-size {
     background-color: $secondary-color;
     font-size: 14px;
-    margin: -7px 15px 0;
+    margin: -8px 15px 0;
   }
 
   @include desktop-size {

@@ -3,6 +3,10 @@
   color: $based-color;
   font-family: $main-font;
   position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  align-items: end;
 
   @include desktop-size {
     &:has(.header__navigation--main) {

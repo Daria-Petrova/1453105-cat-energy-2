@@ -11,7 +11,7 @@
 
 .header__navigation {
   display: grid;
-  grid-template: 66px 1fr / 1fr minmax(24px, auto);
+  grid-template: 65px 1fr / 1fr minmax(24px, auto);
   grid-template-areas:
     "logo       toggle"
     "navigation navigation";
@@ -43,6 +43,7 @@
   }
 
   @include desktop-size {
+    padding-top: 55px;
     grid-template-columns: 1fr 610px 610px 1fr;
     grid-template-areas: ". logo navigation .";
     gap: 0;
@@ -82,9 +83,9 @@
 .header__navigation-list {
   grid-area: navigation;
   align-content: center;
-  border-top: 1px solid #d9d9d9;
+  border-top: $border;
   position: absolute;
-  top: 66px;
+  top: 65px;
 
   @include tablet-size {
     border-top: none;

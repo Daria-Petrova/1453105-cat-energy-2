@@ -35,7 +35,7 @@
 
   @include desktop-size {
     grid-template-columns: repeat(4, 1fr);
-    gap: 80px;
+    gap: 63px 80px;
     margin: initial;
   }
 }

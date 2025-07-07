@@ -31,12 +31,8 @@
 
 .navigation-list__item {
   padding: 22px 20px 24px;
-  border-bottom: 1px solid #d9d9d9;
+  border-bottom: $border;
   color: inherit;
-
-  &:last-child {
-    border-bottom: none;
-  }
 
   @include tablet-size {
     border-bottom: none;
@@ -50,6 +46,8 @@
   }
 
   @include desktop-size {
+    padding: 10px 0 8px;
+
     &:has(.navigation-list__link--active) {
       border-bottom: 2px solid;
       border-color: inherit;
@@ -79,6 +77,10 @@
   @include tablet-size {
     font-size: 18px;
     line-height: 1.33;
+  }
+
+  @include desktop-size {
+    font-size: 20px;
   }
 
   &--active {
