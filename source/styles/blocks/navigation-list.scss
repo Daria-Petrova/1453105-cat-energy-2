@@ -31,7 +31,7 @@
 
 .navigation-list__item {
   padding: 22px 20px 24px;
-  border-bottom: $border;
+  border-bottom: 1px solid $border-color-header;
   color: inherit;
 
   @include tablet-size {
