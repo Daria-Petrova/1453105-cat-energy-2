@@ -79,7 +79,6 @@
       width: 134px;
       height: 100px;
       margin: 4px 0 0 -13px;
-
     }
   }
 }
@@ -99,7 +98,7 @@
     &::before {
       width: 200px;
       height: 211px;
-      margin: -19px 0 0 0;
+      margin: -19px 0 0;
       justify-self: right;
     }
   }
@@ -108,8 +107,9 @@
     &::before {
       width: 100px;
       height: 106px;
-      margin: -2px 0 0 0;
+      margin: -2px 0 0;
     }
+
     .nutrition-type__list-title {
       padding-left: 20px;
     }

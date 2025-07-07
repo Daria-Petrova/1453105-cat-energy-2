@@ -75,6 +75,7 @@
 
 .example__list {
   max-width: 280px;
+
   @include reset-list;
   display: grid;
   grid-template: auto / repeat(2, 1fr);
@@ -112,7 +113,7 @@
   @include font-decore($main-font, 24px, 1, 400, $based-color);
   margin: 0;
   text-transform: uppercase;
-  padding: 14px 14px 14px;
+  padding: 14px;
   text-align: center;
   align-content: center;
   border: 1px solid #cdcdcd;
@@ -156,6 +157,7 @@
   text-align: center;
 
   @include tablet-size {
+    max-width: 200px;
     font-size: 20px;
     line-height: 1;
     justify-items: right;
@@ -163,6 +165,7 @@
   }
 
   @include desktop-size {
+    max-width: none;
     display: flex;
     align-items: end;
     padding: 0;
@@ -187,7 +190,7 @@
 
   @include desktop-size {
     grid-area: slider;
-    justify-self: right;
+    place-self: center right;
     align-content: center;
   }
 }

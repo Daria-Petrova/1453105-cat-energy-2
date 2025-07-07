@@ -67,6 +67,7 @@
 
   @include tablet-size {
     margin-left: 0;
+    align-content: start;
   }
 }
 
